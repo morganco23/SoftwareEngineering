@@ -6,36 +6,13 @@
     <link rel="stylesheet" href="stylesheets/styles.css">
 
     <!--Jquery-->
-    <script
-        src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!--script for processing the users order-->
-    <script>
-        $(document).ready(function(){
-            $("#Order").on("click",function(){
-                var notes = $("#Notes").val();
-                var number = $("#number").val();
-                var plain = $("#plain").is(":checked");
-                var cherry = $("#cherry").is(":checked");
-                var chocolate = $("#chocolate").is(":checked");
-                if (notes.indexOf("vegan") >= 0) {
-                    alert("Note these cheesecakes contain dairy!");
-                }
-                else {
-                    var topping = "plain";
-                    if(cherry == true) {
-                        topping = "cherry";
-                    } else if (chocolate == true){
-                        topping = "chocolate";
-                    } else {
-                        topping = "plain";
-                    }
-                    alert("Thank you! Your order has been placed: \nDetails of your order:\nNumber of cakes: " + number + "\nFlavor: " + topping + "\nNotes: " + notes);
-                }
-            });
-        });
-    </script>
+    <script src="javascripts/processorder.js"></script>
+
+    <script src="javascripts/getMonth.js"></script>
+
 </head>
 <body>
 
@@ -99,13 +76,7 @@
             <a href="#">Dec</a>
         </div>
     </div> 
-    <script>
-        $(document).ready(function(){
-            $("#drpdown-class").on("click", "a", function(){
-                $('#drpdown').html($(this).text());
-            });
-        });
-    </script>
+    
     <ul>
         <li>11 cherry</li>
         <li>17 chocolate</li>
