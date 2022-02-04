@@ -1,3 +1,4 @@
+//Author: Connor Morgan
 eventHandler = function(event) {
     var notes = $("#Notes").val();
     var number = $("#number").val();
